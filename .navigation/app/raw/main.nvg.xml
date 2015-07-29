@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.UserActivity"/>
+      <point      
+        x = "4216"      
+        y = "99"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.MenuActivity"/>
+      <point      
+        x = "432"      
+        y = "155"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "by.gsu.curiosity.mybd.MenuActivity"/>
+      <point      
+        x = "1768"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.TestActivity"/>
+      <point      
+        x = "1863"      
+        y = "70"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "by.gsu.curiosity.mybd.TestActivity"/>
+      <point      
+        x = "3036"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.MainActivity"/>
+      <point      
+        x = "2976"      
+        y = "162"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "by.gsu.curiosity.mybd.MainActivity"/>
+      <point      
+        x = "4304"      
+        y = "2860"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
