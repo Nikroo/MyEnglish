@@ -22,7 +22,7 @@ public class TestActivity extends AppCompatActivity {
     Button btnCheckWord;
     Button btnEditDictionary;
     DatabaseHelper sqlHelper;
-    int i = 1;
+    int i = 0;
 
 
     @Override
@@ -55,36 +55,17 @@ public class TestActivity extends AppCompatActivity {
                 case R.id.btnCheckWord:
 
 //_________________________________________________________________________________________________
-
-
                     Cursor c = db.query("beginner", null, null, null, null, null, null);
                     // ставим позицию курсора на первую строку выборки
                     // если в выборке нет строк, вернется false
-                    if (c.moveToFirst()) {
-
-                        // определяем номера столбцов по имени в выборке
-                        int idColIndex = c.getColumnIndex("_id");
-                        int nameColIndex = c.getColumnIndex("en_word");
-                        int emailColIndex = c.getColumnIndex("ru_word");
-
-                        textViewMainWord.setText(c.getString(i));
-
-                        do {
-                            // получаем значения по номерам столбцов и пишем все в лог
-                            Log.d(LOG_TAG,
-                                    "ID = " + c.getInt(idColIndex) +
-                                            ", en_word = " + c.getString(nameColIndex) +
-                                            ", ru_word = " + c.getString(emailColIndex));
-                            // переход на следующую строку
-                            // а если следующей нет (текущая - последняя), то false - выходим из цикла
-                        } while (c.moveToNext());
-                    } else
-                        Log.d(LOG_TAG, "0 rows");
-
-                    c.close();
-                    i++;
 //_________________________________________________________________________________________________
-                    break;
+
+                    c.moveToFirst();
+                    if(c.moveToPosition(i)) {
+                        textViewMainWord.setText(c.getString(c.getColumnIndex("en_word")));
+                        i++;
+                    }
+//_________________________________________________________________________________________________
             }
             }
         };
