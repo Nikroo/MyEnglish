@@ -71,7 +71,6 @@ public class TestActivity extends AppCompatActivity {
         };
         btnEditDictionary.setOnClickListener(oclBtn);
         btnCheckWord.setOnClickListener(oclBtn);
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
