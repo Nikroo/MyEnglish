@@ -5,23 +5,25 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.SimpleCursorAdapter;
+import android.widget.EditText;
 import android.widget.TextView;
-
-import java.sql.SQLException;
 
 public class TestActivity extends AppCompatActivity {
 
     final String LOG_TAG = "myLogs";
-    TextView textViewMainWord;
+    TextView textViewEnWord;
+    TextView textViewRuWord;
+    TextView trueFolse;
     Button btnCheckWord;
     Button btnEditDictionary;
     DatabaseHelper sqlHelper;
+    EditText editWord;
+    Cursor c;
     int i = 0;
 
 
@@ -29,49 +31,70 @@ public class TestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
-
-        textViewMainWord = (TextView) findViewById(R.id.textViewMainWord);
+        textViewRuWord = (TextView) findViewById(R.id.ru_Word);
+        textViewEnWord = (TextView) findViewById(R.id.en_Word);
+        trueFolse = (TextView) findViewById(R.id.true_folse);
+        editWord = (EditText) findViewById(R.id.inputWord);
         btnCheckWord = (Button) findViewById(R.id.btnCheckWord);
         btnEditDictionary = (Button) findViewById(R.id.btnEditDictionary);
 //_________________________________________________________________________________________________
-////
-         sqlHelper = new DatabaseHelper(getApplicationContext());
+
+        sqlHelper = new DatabaseHelper(getApplicationContext());
+        SQLiteDatabase db =
+                sqlHelper.getWritableDatabase();
+        c = db.query("beginner", null, null, null, null, null, null);
+        // ставим позицию курсора на первую строку выборки
+        // если в выборке нет строк, вернется false
+//_________________________________________________________________________________________________
+
+        if (i <= 0) {
+            if (c.moveToPosition(i)) {
+                btnCheckWord.setText("Go");
+                textViewEnWord.setText(c.getString(c.getColumnIndex("en_word")));
+                textViewRuWord.setText(c.getString(c.getColumnIndex("ru_word")));
+            }
+        }
 //_________________________________________________________________________________________________
         View.OnClickListener oclBtn = new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
+
+                switch (v.getId()) {
+                    case R.id.btnEditDictionary:
+                        startActivity(new Intent(TestActivity.this, MainActivity.class));
+                        break;
+                    case R.id.btnCheckWord:
 //_________________________________________________________________________________________________
-                SQLiteDatabase db =
-                        sqlHelper.getWritableDatabase();
-////_________________________________________________________________________________________________
+                        if (!TextUtils.isEmpty(editWord.getText().toString())) {
+                            if (editWord.getText().toString().equals(c.getString(c.getColumnIndex("en_word")))) {
+                                trueFolse.setText("true");
+                            } else {
+                                trueFolse.setText("folse");
+                            }
 
-
-                switch (v.getId()){
-                case R.id.btnEditDictionary:
-                    startActivity(new Intent(TestActivity.this, MainActivity.class));
-                    break;
-                case R.id.btnCheckWord:
-
-//_________________________________________________________________________________________________
-                    Cursor c = db.query("beginner", null, null, null, null, null, null);
-                    // ставим позицию курсора на первую строку выборки
-                    // если в выборке нет строк, вернется false
-//_________________________________________________________________________________________________
-
-                    c.moveToFirst();
-                    if(c.moveToPosition(i)) {
-                        textViewMainWord.setText(c.getString(c.getColumnIndex("en_word")));
+                        } else {
+                            trueFolse.setText("write text");
+                            break;
+                        }
+                        editWord.setText("");
                         i++;
-                    }
+                        if (c.moveToPosition(i)) {
+                            textViewEnWord.setText(c.getString(c.getColumnIndex("en_word")));
+                            textViewRuWord.setText(c.getString(c.getColumnIndex("ru_word")));
+                        } else {
+                            c.close();
+                            trueFolse.setText("Нужно что то сделать когда закончаться слова");
+                        }
 //_________________________________________________________________________________________________
-            }
+                }
             }
         };
         btnEditDictionary.setOnClickListener(oclBtn);
         btnCheckWord.setOnClickListener(oclBtn);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

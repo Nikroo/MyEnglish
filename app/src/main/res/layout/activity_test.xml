@@ -14,8 +14,17 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Word"
+            android:id="@+id/ru_Word"
+            android:gravity="center_horizontal"
+            android:textSize="40dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/textView"
+            android:id="@+id/true_folse"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:layout_margin="77dp"
@@ -26,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Word"
-            android:id="@+id/textViewMainWord"
+            android:id="@+id/en_Word"
             android:gravity="center_horizontal"
             android:textSize="40dp" />
 
@@ -34,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:id="@+id/inputEditView" />
+            android:id="@+id/inputWord" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
