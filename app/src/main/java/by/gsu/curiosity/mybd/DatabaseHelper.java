@@ -1,4 +1,5 @@
 package by.gsu.curiosity.mybd;
+import android.content.Intent;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
@@ -9,16 +10,19 @@ import java.io.FileOutputStream;
 import java.io.File;
 import java.sql.SQLException;
 
- public class DatabaseHelper extends SQLiteOpenHelper {
+ public class DatabaseHelper extends SQLiteOpenHelper  {
 
     private static String DB_PATH = "/data/data/by.gsu.curiosity.mybd/databases/";
-    private static String DB_NAME = "yourdb1.sqlite3";
+    private static String DB_NAME = "mainDBv2.sqlite3";
     private static final int SCHEMA = 1; // версия базы данных
-    static final String TABLE = "beginner";
+    public static String TABLE = "Word";
+    public static String LEVEL;
+    public static String UNIT;
+
 
     public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_NAME = "en_word";
-    public static final String COLUMN_YEAR = "ru_word";
+    public static  String EN_WORD = "wordEN";
+    public static  String RU_WORD = "wordRU";
     public SQLiteDatabase database;
     private Context myContext;
 
@@ -29,6 +33,9 @@ import java.sql.SQLException;
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+//        intent = getIntent();
+//        table = intent.getStringExtra("level");
+
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) {
@@ -80,4 +87,6 @@ import java.sql.SQLException;
         }
         super.close();
     }
-}
+
+
+ }

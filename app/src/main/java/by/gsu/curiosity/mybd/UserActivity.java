@@ -2,12 +2,10 @@ package by.gsu.curiosity.mybd;
 
         import android.content.ContentValues;
         import android.database.Cursor;
-        import android.support.v7.app.ActionBarActivity;
+        import android.support.v7.app.AppCompatActivity;
         import android.support.v4.app.Fragment;
         import android.os.Bundle;
         import android.view.LayoutInflater;
-        import android.view.Menu;
-        import android.view.MenuItem;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.Button;
@@ -15,9 +13,9 @@ package by.gsu.curiosity.mybd;
         import android.content.Intent;
         import java.sql.SQLException;
 
-public class UserActivity extends ActionBarActivity {
+public class UserActivity extends AppCompatActivity {
 
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
@@ -38,11 +36,13 @@ public class UserActivity extends ActionBarActivity {
 
     public static class PlaceholderFragment extends Fragment {
 
-        EditText nameBox;
-        EditText yearBox;
+        EditText ruBox;
+        EditText enBox;
         Button delButton;
         Button saveButton;
         Button add;
+        String table;
+
 
 
         DatabaseHelper sqlHelper;
@@ -61,19 +61,16 @@ public class UserActivity extends ActionBarActivity {
             super.onCreate(savedInstanceState);
             setRetainInstance(true);
 
-
         }
         public PlaceholderFragment() {
         }
-
-
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_user, container, false);
-            nameBox = (EditText) rootView.findViewById(R.id.name);
-            yearBox = (EditText) rootView.findViewById(R.id.year);
+            ruBox = (EditText) rootView.findViewById(R.id.ru_word);
+            enBox = (EditText) rootView.findViewById(R.id.en_word);
             delButton = (Button) rootView.findViewById(R.id.delete);
             saveButton = (Button) rootView.findViewById(R.id.save);
             add = (Button) rootView.findViewById(R.id.add);
@@ -83,8 +80,9 @@ public class UserActivity extends ActionBarActivity {
             try {
 
                 sqlHelper.open();
+//                table = sqlHelper.table;
 
-                // кнопка удаления
+// кнопка удаления
                 delButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -95,49 +93,53 @@ public class UserActivity extends ActionBarActivity {
                     }
                 });
 
-                // кнопка добавления
+// кнопка добавления
                 add.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         ContentValues cv = new ContentValues();
-                        cv.put(DatabaseHelper.COLUMN_NAME, nameBox.getText().toString());
-                        cv.put(DatabaseHelper.COLUMN_YEAR, yearBox.getText().toString());
+                        cv.put(DatabaseHelper.EN_WORD, ruBox.getText().toString());
+                        cv.put(DatabaseHelper.RU_WORD, enBox.getText().toString());
+                        cv.put("wordUnit",DatabaseHelper.LEVEL);
+                        cv.put("wordLevel",DatabaseHelper.LEVEL);
                         sqlHelper.database.insert(DatabaseHelper.TABLE, null, cv);
                         goHome();
                     }
 
                 });
-                // кнопка сохранения
+// кнопка сохранения
                 saveButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         ContentValues cv = new ContentValues();
-                        cv.put(DatabaseHelper.COLUMN_NAME, nameBox.getText().toString());
-                        cv.put(DatabaseHelper.COLUMN_YEAR, yearBox.getText().toString());
+                        cv.put(DatabaseHelper.EN_WORD, ruBox.getText().toString());
+                        cv.put(DatabaseHelper.RU_WORD, enBox.getText().toString());
 
                         if (id > 0) {
                             sqlHelper.database.update(DatabaseHelper.TABLE, cv,
                                     DatabaseHelper.COLUMN_ID + "=" + String.valueOf(id), null);
                         } else {
-                            sqlHelper.database.insert(DatabaseHelper.TABLE, null, cv);
+                            sqlHelper.database.insert(table, null, cv);
                         }
                         goHome();
                     }
                 });
+//  // если 0, то добавление
 
-                // если 0, то добавление
                 if (id > 0) {
+
                     // получаем элемент по id из бд
                     userCursor = sqlHelper.database.rawQuery("select * from " + DatabaseHelper.TABLE + " where " +
                             DatabaseHelper.COLUMN_ID + "=?", new String[]{String.valueOf(id)});
                     userCursor.moveToFirst();
-                    nameBox.setText(userCursor.getString(1));
-                    yearBox.setText(userCursor.getString(2));
+                    ruBox.setText(userCursor.getString(1));
+                    enBox.setText(userCursor.getString(2));
                     userCursor.close();
                 } else {
                     // скрываем кнопку удаления
                     delButton.setVisibility(View.GONE);
                 }
+
             }
             catch (SQLException ex) {
                 ex.printStackTrace();

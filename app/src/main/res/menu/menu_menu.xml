@@ -1,7 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="by.gsu.curiosity.mybd.MenuActivity">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--tools:context="by.gsu.curiosity.mybd.MenuActivity">-->
+    <!--<item android:id="@+id/action_settings" android:title="@string/action_settings"-->
+        <!--android:orderInCategory="100" app:showAsAction="never" />-->
+
+    <item android:id="@+id/search"
+        android:title="@string/search_title"
+        android:orderInCategory="1"
+        android:icon="@mipmap/ic_magnify_white_24dp"
+        app:showAsAction="ifRoom"/>
+
 </menu>

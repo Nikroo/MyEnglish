@@ -3,6 +3,7 @@ package by.gsu.curiosity.mybd;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -14,18 +15,23 @@ import android.database.Cursor;
 import android.widget.SimpleCursorAdapter;
 import java.sql.SQLException;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     ListView mList;
     TextView header;
     DatabaseHelper sqlHelper;
     Cursor userCursor;
     SimpleCursorAdapter userAdapter;
+    String table;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent2 = getIntent();
+        table = intent2.getStringExtra("id");
 
         header = (TextView)findViewById(R.id.header);
         mList = (ListView)findViewById(R.id.list);
@@ -39,16 +45,26 @@ public class MainActivity extends ActionBarActivity {
             }
         });
         sqlHelper = new DatabaseHelper(getApplicationContext());
-        // создаем базу данных
-//        sqlHelper.create_db();
+
     }
     @Override
     public void onResume(){
+
         super.onResume();
         try {
             sqlHelper.open();
-            userCursor = sqlHelper.database.rawQuery("select * from " + DatabaseHelper.TABLE, null);
-            String[] headers = new String[]{DatabaseHelper.COLUMN_NAME, DatabaseHelper.COLUMN_YEAR};
+            String sqlQuery =
+                    "select Word._id, Word.wordEN, Word.wordRU "
+                            + "from Word "
+                            + "where Word.wordLevel = ? and Word.wordUnit = ? ";
+
+            userCursor = sqlHelper.database.rawQuery(sqlQuery, new String[] {DatabaseHelper.LEVEL, DatabaseHelper.UNIT}
+
+//                    "select * from " + DatabaseHelper.TABLE, null
+            );
+
+            String[] headers = new String[]{DatabaseHelper.EN_WORD, DatabaseHelper.RU_WORD};
+
             userAdapter = new SimpleCursorAdapter(this, android.R.layout.two_line_list_item,
                     userCursor, headers, new int[]{android.R.id.text1, android.R.id.text2}, 0);
             header.setText("Найдено элементов: " + String.valueOf(userCursor.getCount()));
@@ -85,4 +101,5 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

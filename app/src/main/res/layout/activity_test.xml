@@ -9,7 +9,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        >
 
         <TextView
             android:layout_width="match_parent"
@@ -30,6 +31,19 @@
             android:layout_margin="77dp"
             android:textSize="30dp" />
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCheckWord"
+            android:text="Check"
+            />
+
+        <Button
+        android:id="@+id/btnEditDictionary"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        android:text="Edit Dictionary" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,17 +58,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/inputWord" />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnCheckWord"
-            android:text="Check"/>
-        <Button
-        android:id="@+id/btnEditDictionary"
-        android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:text="Edit Dictionary" />
 
 
     </LinearLayout>

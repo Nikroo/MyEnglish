@@ -4,19 +4,20 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
         <activity
-            android:name=".MenuActivity"
-            android:label="@string/title_activity_menu"
-             >
+            android:name="MenuActivity"
+            android:label="@string/title_activity_menu" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".UserActivity"
             android:label="@string/title_activity_user" >
@@ -26,8 +27,13 @@
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:windowSoftInputMode="adjustUnspecified"
             android:name=".TestActivity"
             android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name=".UnitActivity"
+            android:label="@string/title_activity_unit" >
         </activity>
     </application>
 
