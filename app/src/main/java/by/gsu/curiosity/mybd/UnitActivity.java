@@ -70,13 +70,8 @@ public class UnitActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(UnitActivity.this, TestActivity.class));
 
                 break;
-//
-//            case R.id.btnIntermedia:
-////                Intent intentIntermedia = new Intent(this, TestActivity.class);
-////                intentIntermedia.putExtra("level", "beginner");
-////                startActivity(intentIntermedia);
-//                break;
-//
+
+
         }
     }
 }
