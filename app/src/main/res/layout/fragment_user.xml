@@ -7,12 +7,12 @@
         android:id="@+id/ru_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите имя"/>
+        />
     <EditText
         android:id="@+id/en_word"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введите год рождения"/>
+       />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
