@@ -13,26 +13,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.sql.SQLException;
 
 public class TestActivity extends AppCompatActivity
         implements View.OnClickListener {
 
-    final String LOG_TAG = "myLogs";
-    String table;
-    int k;
-    static int bedLetter[];
-    TextView textViewEnWord;
     TextView textViewRuWord;
-    TextView trueFolse;
+    static TextView trueFolse;
     Button btnCheckWord;
     Button btnEditDictionary;
     DatabaseHelper sqlHelper;
     EditText editWord;
     Cursor c;
-    int cursorCounter = 0;
-    int trueWord = 0;
+    static int cursorCounter = 0;
+    static int trueWord = 0;
 
 
     @Override
@@ -41,7 +37,7 @@ public class TestActivity extends AppCompatActivity
         setContentView(R.layout.activity_test);
 
         textViewRuWord = (TextView) findViewById(R.id.ru_Word);
-        textViewEnWord = (TextView) findViewById(R.id.en_Word);
+//        textViewEnWord = (TextView) findViewById(R.id.en_Word);
         trueFolse = (TextView) findViewById(R.id.true_folse);
         editWord = (EditText) findViewById(R.id.inputWord);
 
@@ -67,7 +63,7 @@ public class TestActivity extends AppCompatActivity
 //
         if (cursorCounter <= 0) {
             if (c.moveToPosition(cursorCounter)) {
-                textViewEnWord.setText(c.getString(c.getColumnIndex("wordEN")));
+//                textViewEnWord.setText(c.getString(c.getColumnIndex("wordEN")));
                 textViewRuWord.setText(c.getString(c.getColumnIndex("wordRU")));
             }
         }
@@ -135,7 +131,7 @@ public class TestActivity extends AppCompatActivity
                         trueWord++;
 
                     } else {
-                        trueFolse.setText("false");
+                        trueFolse.setText("FALSE! true is: \n"+c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)));
                     }
 
                 } else {
@@ -145,11 +141,13 @@ public class TestActivity extends AppCompatActivity
                 editWord.setText("");
                 cursorCounter++;
                 if (c.moveToPosition(cursorCounter)) {
-                    textViewEnWord.setText(c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)));
+//                    textViewEnWord.setText(c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)));
                     textViewRuWord.setText(c.getString(c.getColumnIndex(DatabaseHelper.RU_WORD)));
+
                 } else {
                     c.close();
-                    trueFolse.setText(trueWord + "  of " + cursorCounter + " correct words");
+//                    trueFolse.setText(trueWord + "  of " + cursorCounter + " correct words");
+                    startActivity(new Intent(TestActivity.this, ResultActivity.class));
 
                 }
         }

@@ -41,6 +41,10 @@
             android:name=".TestMenu"
             android:label="@string/title_activity_test_menu" >
         </activity>
+        <activity
+            android:name=".ResultActivity"
+            android:label="@string/title_activity_result" >
+        </activity>
     </application>
 
 </manifest>

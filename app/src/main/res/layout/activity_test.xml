@@ -3,33 +3,62 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical">
-
+    android:gravity="center_vertical"
+    android:background="@color/button_material_light">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:layout_weight="1"
+        android:background="#f1f1f1">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Word"
-            android:id="@+id/ru_Word"
-            android:gravity="center_horizontal"
-            android:textSize="40dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:text="New Text"
             android:id="@+id/true_folse"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:layout_margin="77dp"
             android:textSize="30dp" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#f6f6f6"
+            android:layout_weight="1">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Word"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/ru_Word"
+            android:gravity="center"
+            android:textSize="40dp" />
+
+           </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="#f1f1f1">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView2" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/inputWord" />
 
         <Button
             android:layout_width="match_parent"
@@ -44,20 +73,14 @@
             android:layout_height="wrap_content"
         android:text="Edit Dictionary" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Word"
-            android:id="@+id/en_Word"
-            android:gravity="center_horizontal"
-            android:textSize="40dp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:id="@+id/inputWord" />
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="Word"-->
+            <!--android:id="@+id/en_Word"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:textSize="40dp" />-->
 
 
     </LinearLayout>

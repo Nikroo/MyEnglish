@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 public class TestMenu extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class TestMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_menu);
+
         findViewById(R.id.btnXoxo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
