@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
 
     <TableLayout
+
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
+        android:background="@drawable/backgraundlevel"
         android:stretchColumns="*"
 
         >
@@ -20,25 +24,34 @@
             android:baselineAligned="false"
             android:clickable="false"
             android:focusable="false"
-            android:focusableInTouchMode="false">
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:gravity="center">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U1"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number1"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U1" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U2"
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number2"
+                app:cb_pressedRingWidth="8dip"
+
                 android:id="@+id/U2" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U3"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number3"
+                app:cb_pressedRingWidth="8dip"
+
                 android:id="@+id/U3" />
+
         </TableRow>
 
         <TableRow
@@ -47,24 +60,29 @@
             android:baselineAligned="false"
             android:clickable="false"
             android:focusable="false"
-            android:focusableInTouchMode="false">
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:gravity="center">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U4"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number4"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U4" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U5"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number5"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U5" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U6"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number6"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U6" />
         </TableRow>
 
@@ -74,26 +92,93 @@
             android:baselineAligned="false"
             android:clickable="false"
             android:focusable="false"
-            android:focusableInTouchMode="false">
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:gravity="center">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U7"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number7"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U7" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="U8"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number8"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U8" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="fill_vertical"
-                android:text="U9"
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number9"
+                app:cb_pressedRingWidth="8dip"
                 android:id="@+id/U9" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number10"
+                app:cb_pressedRingWidth="8dip"
+                android:id="@+id/U10" />
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number11"
+                app:cb_pressedRingWidth="8dip"
+                android:id="@+id/U11" />
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number12"
+                app:cb_pressedRingWidth="8dip"
+                android:id="@+id/U12" />
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number13"
+                app:cb_pressedRingWidth="8dip"
+                android:id="@+id/U13" />
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number14"
+                app:cb_pressedRingWidth="8dip"
+                android:id="@+id/U14" />
+
+            <at.markushi.ui.CircleButton
+                android:layout_width="64dip"
+                android:layout_height="64dip"
+                android:src="@drawable/number15"
+                app:cb_pressedRingWidth="8dip"
+                android:id="@+id/U15" />
         </TableRow>
     </TableLayout>
 

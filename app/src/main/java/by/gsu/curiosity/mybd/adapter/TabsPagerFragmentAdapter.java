@@ -1,12 +1,15 @@
 package by.gsu.curiosity.mybd.adapter;
 
-import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.ListFragment;
 
-import by.gsu.curiosity.mybd.MenuActivity;
 import by.gsu.curiosity.mybd.fragment.ExampleFragment;
+import by.gsu.curiosity.mybd.fragment.InfoFragment;
+import by.gsu.curiosity.mybd.fragment.ListsFragment;
+import by.gsu.curiosity.mybd.fragment.RulesFragment;
+
 
 public class TabsPagerFragmentAdapter extends FragmentPagerAdapter {
 
@@ -38,11 +41,11 @@ public class TabsPagerFragmentAdapter extends FragmentPagerAdapter {
             case 0:
                 return ExampleFragment.getInstance();
             case 1:
-                return ExampleFragment.getInstance();
+                return RulesFragment.getInstance();
             case 2:
-                return ExampleFragment.getInstance();
+                return ListsFragment.getInstance();
             case 3:
-                return ExampleFragment.getInstance();
+                return InfoFragment.getInstance();
 
 
         }

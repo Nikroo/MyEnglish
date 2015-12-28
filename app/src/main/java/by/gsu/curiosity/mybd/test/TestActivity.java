@@ -1,4 +1,4 @@
-package by.gsu.curiosity.mybd;
+package by.gsu.curiosity.mybd.test;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -6,16 +6,15 @@ import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.sql.SQLException;
+import by.gsu.curiosity.mybd.DatabaseHelper;
+import by.gsu.curiosity.mybd.R;
 
 public class TestActivity extends AppCompatActivity
         implements View.OnClickListener {
@@ -26,7 +25,7 @@ public class TestActivity extends AppCompatActivity
     Button btnEditDictionary;
     DatabaseHelper sqlHelper;
     EditText editWord;
-    Cursor c;
+    static Cursor c;
     static int cursorCounter = 0;
     static int trueWord = 0;
 
@@ -45,6 +44,7 @@ public class TestActivity extends AppCompatActivity
         btnEditDictionary = (Button) findViewById(R.id.btnEditDictionary);
         btnEditDictionary.setOnClickListener(this);
         btnCheckWord.setOnClickListener(this);
+
 
 //_________________________________________________________________________________________________
 
@@ -67,6 +67,7 @@ public class TestActivity extends AppCompatActivity
                 textViewRuWord.setText(c.getString(c.getColumnIndex("wordRU")));
             }
         }
+
 //_________________________________________________________________________________________________
     }
 
@@ -97,7 +98,7 @@ public class TestActivity extends AppCompatActivity
             case R.id.btnEditDictionary:
 //_________________________________________________________________________________________________
 
-                Intent intentDictionary = new Intent(this, MainActivity.class);
+                Intent intentDictionary = new Intent(this, ListActivity.class);
                 intentDictionary.putExtra("id", DatabaseHelper.TABLE);
                 startActivity(intentDictionary);
 //_________________________________________________________________________________________________
@@ -145,12 +146,17 @@ public class TestActivity extends AppCompatActivity
                     textViewRuWord.setText(c.getString(c.getColumnIndex(DatabaseHelper.RU_WORD)));
 
                 } else {
-                    c.close();
+
 //                    trueFolse.setText(trueWord + "  of " + cursorCounter + " correct words");
                     startActivity(new Intent(TestActivity.this, ResultActivity.class));
+                    c.close();
+
+
 
                 }
         }
 
+
     }
-}
+
+  }

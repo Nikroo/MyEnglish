@@ -1,7 +1,6 @@
-package by.gsu.curiosity.mybd;
+package by.gsu.curiosity.mybd.test;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -15,7 +14,10 @@ import android.database.Cursor;
 import android.widget.SimpleCursorAdapter;
 import java.sql.SQLException;
 
-public class MainActivity extends AppCompatActivity {
+import by.gsu.curiosity.mybd.DatabaseHelper;
+import by.gsu.curiosity.mybd.R;
+
+public class ListActivity extends AppCompatActivity {
 
     ListView mList;
     TextView header;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_list);
 
         Intent intent2 = getIntent();
         table = intent2.getStringExtra("id");
@@ -60,13 +62,18 @@ public class MainActivity extends AppCompatActivity {
 
             userCursor = sqlHelper.database.rawQuery(sqlQuery, new String[] {DatabaseHelper.LEVEL, DatabaseHelper.UNIT}
 
-//                    "select * from " + DatabaseHelper.TABLE, null
             );
 
             String[] headers = new String[]{DatabaseHelper.EN_WORD, DatabaseHelper.RU_WORD};
 
-            userAdapter = new SimpleCursorAdapter(this, android.R.layout.two_line_list_item,
-                    userCursor, headers, new int[]{android.R.id.text1, android.R.id.text2}, 0);
+            userAdapter = new SimpleCursorAdapter(
+                    this,
+                    android.R.layout.two_line_list_item,
+                    userCursor,
+                    headers,
+                    new int[]{android.R.id.text1, android.R.id.text2},
+                    0
+            );
             header.setText("Найдено элементов: " + String.valueOf(userCursor.getCount()));
             mList.setAdapter(userAdapter);
         }

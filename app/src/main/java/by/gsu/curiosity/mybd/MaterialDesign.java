@@ -1,6 +1,7 @@
 package by.gsu.curiosity.mybd;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -22,11 +23,13 @@ public class MaterialDesign extends AppCompatActivity{
 
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
-    //    private TabLayout tabLayout;
-    private ViewPager viewPager;
 
+    private ViewPager viewPager;
+    static int cursorCounter = 0;
+    static Cursor c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         setTheme(R.style.AppDefault);
         super.onCreate(savedInstanceState);
         setContentView(LAYOUT);
@@ -36,18 +39,18 @@ public class MaterialDesign extends AppCompatActivity{
         initTabs();
 
         // создаем базу данных 1ый раз для того что бы проинициализировать внутреннюю базу приложения значениями.
-        // без этого при попытке прохождения теста без предворительного обращения к классу MainActivity приложение отваливается
+        // без этого при попытке прохождения теста без предворительного обращения к классу ListActivity приложение отваливается
         // КОСТЫЛЬ
-//        sqlHelper = new DatabaseHelper(getApplicationContext());
-//        sqlHelper.create_db();
+        sqlHelper = new DatabaseHelper(getApplicationContext());
+
+        sqlHelper.create_db();
 //______________________________________________________________________________________________________
     }
-
-
 
     private void initToolbar(){
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
+        toolbar.setTitleTextColor(getResources().getColor (R.color.colorWhite));
         toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
 
             @Override

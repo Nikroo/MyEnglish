@@ -1,5 +1,6 @@
 package by.gsu.curiosity.mybd;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
@@ -13,9 +14,10 @@ import java.sql.SQLException;
  public class DatabaseHelper extends SQLiteOpenHelper  {
 
     private static String DB_PATH = "/data/data/by.gsu.curiosity.mybd/databases/";
-    private static String DB_NAME = "mainDBv2.sqlite3";
+    private static String DB_NAME = "mainDBv3.sqlite3";
     private static final int SCHEMA = 1; // версия базы данных
     public static String TABLE = "Word";
+    public static String TABLEIRR = "irregularV";
     public static String LEVEL;
     public static String UNIT;
 
@@ -23,6 +25,15 @@ import java.sql.SQLException;
     public static final String COLUMN_ID = "_id";
     public static  String EN_WORD = "wordEN";
     public static  String RU_WORD = "wordRU";
+
+     public static  String WORDONE = "wordONE";
+     public static  String WORDTWO = "wordTWO";
+     public static  String WORDTHREE = "wordThree";
+     public static  String IRRNAME = "people";
+
+
+
+    public DatabaseHelper db;
     public SQLiteDatabase database;
     private Context myContext;
 
@@ -41,6 +52,11 @@ import java.sql.SQLException;
     public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) {
 
     }
+
+     public Cursor getTable(String tbl_name) {
+         String sqlQuery = "select * from " + tbl_name + ";";
+         return database.rawQuery(sqlQuery, null);
+     }
 
     public void create_db(){
         InputStream myInput = null;

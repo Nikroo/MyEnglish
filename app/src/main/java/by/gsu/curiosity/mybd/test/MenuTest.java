@@ -1,11 +1,13 @@
-package by.gsu.curiosity.mybd;
+package by.gsu.curiosity.mybd.test;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import by.gsu.curiosity.mybd.DatabaseHelper;
+import by.gsu.curiosity.mybd.R;
 
 public class MenuTest extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,7 +24,7 @@ public class MenuTest extends AppCompatActivity implements View.OnClickListener 
 //        setTheme(R.style.AppDefault);
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_menu);
+        setContentView(MENU);
 
 
         btnBeginner = (Button) findViewById(R.id.btnBeginner);
@@ -33,7 +35,7 @@ public class MenuTest extends AppCompatActivity implements View.OnClickListener 
         btnIntermediate.setOnClickListener(this);
 
         // создаем базу данных 1ый раз для того что бы проинициализировать внутреннюю базу приложения значениями.
-        // без этого при попытке прохождения теста без предворительного обращения к классу MainActivity приложение отваливается
+        // без этого при попытке прохождения теста без предворительного обращения к классу ListActivity приложение отваливается
         // КОСТЫЛЬ
         sqlHelper = new DatabaseHelper(getApplicationContext());
         sqlHelper.create_db();

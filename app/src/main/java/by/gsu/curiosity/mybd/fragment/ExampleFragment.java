@@ -9,9 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import by.gsu.curiosity.mybd.MenuActivity;
+import by.gsu.curiosity.mybd.test.MenuTest;
 import by.gsu.curiosity.mybd.R;
-import by.gsu.curiosity.mybd.TestActivity;
 
 
 public class ExampleFragment extends Fragment {
@@ -27,6 +26,7 @@ private final static int EXAMPLE = R.layout.fragment_example;
       return fragment;
   }
 
+
     private View view;
 
     @Nullable
@@ -34,10 +34,12 @@ private final static int EXAMPLE = R.layout.fragment_example;
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(EXAMPLE,container, false);
 
+
+
         Button button = (Button) view.findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(ExampleFragment.this.getActivity(),MenuActivity.class);
+                Intent intent = new Intent(ExampleFragment.this.getActivity(),MenuTest.class);
                 startActivity(intent);
             }
         });

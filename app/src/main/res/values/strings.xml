@@ -9,6 +9,13 @@
     <string name="title_activity_test">TestActivity</string>
     <string name="title_activity_result">ResultActivity</string>
     <string name="title_activity_unit">UnitActivity</string>
+
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_info">InfoActivity</string>
+
+
+
     <string name="search_title">Search</string>
     <string name="menu_item_dictionary">Dictionary</string>
 

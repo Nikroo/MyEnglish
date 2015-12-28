@@ -4,4 +4,6 @@
     <color name = "colorPrimaryDark">#263078</color>
     <color name = "mainBackground">#dcdcdc</color>
     <color name = "colorWhite">#dcdcdc</color>
+    <color name = "colorPrimaryBlue">#0072bc</color>
+    <color name = "colorPrimaryRed">#ed1c24</color>
 </resources>

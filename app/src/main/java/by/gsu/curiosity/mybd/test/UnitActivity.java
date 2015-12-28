@@ -1,4 +1,4 @@
-package by.gsu.curiosity.mybd;
+package by.gsu.curiosity.mybd.test;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,12 +6,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+
+import at.markushi.ui.CircleButton;
+import by.gsu.curiosity.mybd.DatabaseHelper;
+import by.gsu.curiosity.mybd.R;
 
 public class UnitActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnU1, btnU2, btnU3, btnU4, btnU5, btnU6, btnU7, btnU8, btnU9;
+    CircleButton btnU1, btnU2, btnU3, btnU4, btnU5, btnU6, btnU7, btnU8, btnU9;
 
 
     @Override
@@ -20,15 +23,15 @@ public class UnitActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_unit);
 
-        btnU1 = (Button) findViewById(R.id.U1);
-        btnU2 = (Button) findViewById(R.id.U2);
-        btnU3 = (Button) findViewById(R.id.U3);
-        btnU4 = (Button) findViewById(R.id.U4);
-        btnU5 = (Button) findViewById(R.id.U5);
-        btnU6 = (Button) findViewById(R.id.U6);
-        btnU7 = (Button) findViewById(R.id.U7);
-        btnU8 = (Button) findViewById(R.id.U8);
-        btnU9 = (Button) findViewById(R.id.U9);
+        btnU1 = (CircleButton) findViewById(R.id.U1);
+        btnU2 = (CircleButton) findViewById(R.id.U2);
+        btnU3 = (CircleButton) findViewById(R.id.U3);
+        btnU4 = (CircleButton) findViewById(R.id.U4);
+        btnU5 = (CircleButton) findViewById(R.id.U5);
+        btnU6 = (CircleButton) findViewById(R.id.U6);
+        btnU7 = (CircleButton) findViewById(R.id.U7);
+        btnU8 = (CircleButton) findViewById(R.id.U8);
+        btnU9 = (CircleButton) findViewById(R.id.U9);
 
         btnU1.setOnClickListener(this);
         btnU2.setOnClickListener(this);

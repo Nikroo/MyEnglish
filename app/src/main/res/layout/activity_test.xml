@@ -4,23 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
-    android:background="@color/button_material_light">
+    android:background="@color/colorPrimaryBlue">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:background="#f1f1f1">
+
+        android:background="@color/colorPrimaryBlue">
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="New Text"
+            android:textColor="@color/colorWhite"
             android:id="@+id/true_folse"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:textSize="30dp" />
+            android:textSize="20dp" />
 
     </LinearLayout>
 
@@ -47,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:background="#f1f1f1">
+        android:background="@color/colorPrimaryBlue">
 
         <ScrollView
             android:layout_width="wrap_content"

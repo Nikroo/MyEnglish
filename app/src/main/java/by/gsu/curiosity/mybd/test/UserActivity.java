@@ -1,4 +1,4 @@
-package by.gsu.curiosity.mybd;
+package by.gsu.curiosity.mybd.test;
 
         import android.content.ContentValues;
         import android.database.Cursor;
@@ -12,6 +12,10 @@ package by.gsu.curiosity.mybd;
         import android.widget.EditText;
         import android.content.Intent;
         import java.sql.SQLException;
+
+        import by.gsu.curiosity.mybd.DatabaseHelper;
+        import by.gsu.curiosity.mybd.R;
+        import by.gsu.curiosity.mybd.test.ListActivity;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -100,7 +104,7 @@ public class UserActivity extends AppCompatActivity {
                         ContentValues cv = new ContentValues();
                         cv.put(DatabaseHelper.EN_WORD, ruBox.getText().toString());
                         cv.put(DatabaseHelper.RU_WORD, enBox.getText().toString());
-                        cv.put("wordUnit",DatabaseHelper.LEVEL);
+                        cv.put("wordUnit",DatabaseHelper.UNIT);
                         cv.put("wordLevel",DatabaseHelper.LEVEL);
                         sqlHelper.database.insert(DatabaseHelper.TABLE, null, cv);
                         goHome();
@@ -149,7 +153,7 @@ public class UserActivity extends AppCompatActivity {
         public void goHome(){
 
             sqlHelper.database.close();
-            Intent intent = new Intent(getActivity(), MainActivity.class);
+            Intent intent = new Intent(getActivity(), ListActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             startActivity(intent);
         }
