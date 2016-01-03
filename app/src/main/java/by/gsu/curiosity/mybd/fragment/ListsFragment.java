@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import by.gsu.curiosity.mybd.R;
-import by.gsu.curiosity.mybd.lists.CollectionsActivity;
-import by.gsu.curiosity.mybd.test.MenuTest;
+import by.gsu.curiosity.mybd.info.CollectionsActivity;
 
 
 public class ListsFragment extends Fragment {

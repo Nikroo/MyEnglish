@@ -9,8 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import by.gsu.curiosity.mybd.info.InfoActivity;
-import by.gsu.curiosity.mybd.test.MenuTest;
+import by.gsu.curiosity.mybd.lists.InfoActivity;
 import by.gsu.curiosity.mybd.R;
 
 
