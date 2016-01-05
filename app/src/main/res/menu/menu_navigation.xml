@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
         android:id="@+id/actionDictionary"
         android:orderInCategory="1"
         android:title="@string/menu_item_dictionary"
         android:icon="@mipmap/ic_book"
         />
+    <item
+        android:id="@+id/RU"
+        android:orderInCategory="1"
+        android:title="@string/menu_item_localeru"
+        android:icon="@mipmap/ic_book"
+        />
+    <item
+        android:id="@+id/EN"
+        android:orderInCategory="1"
+        android:title="@string/menu_item_localeen"
+        android:icon="@mipmap/ic_book"
+        />
+    <item
+        android:id="@+id/dark"
+        android:orderInCategory="1"
+        android:title="@string/menu_item_profiledark"
+        android:icon="@mipmap/ic_book"
+        />
+    <item
+        android:id="@+id/norm"
+        android:orderInCategory="1"
+        android:title="@string/menu_item_profilestandart"
+        android:icon="@mipmap/ic_book"/>
+
+
 
     <!--<item-->
         <!--android:title="@string/search_title"-->

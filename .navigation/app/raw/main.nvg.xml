@@ -6,14 +6,6 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "by.gsu.curiosity.mybd.test.UnitActivity"/>
-      <point      
-        x = "2135"      
-        y = "583"/>
-    </statePointEntry>
-    <statePointEntry>
-      <state      
-        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "by.gsu.curiosity.mybd.fragment.TestFragment"/>
       <point      
         x = "156"      
@@ -24,8 +16,8 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "by.gsu.curiosity.mybd.test.UserActivity"/>
       <point      
-        x = "5093"      
-        y = "591"/>
+        x = "5071"      
+        y = "338"/>
     </statePointEntry>
     <statePointEntry>
       <state      
@@ -46,10 +38,10 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "by.gsu.curiosity.mybd.test.ResultActivity"/>
+        className = "by.gsu.curiosity.mybd.lists.DetailsActivity"/>
       <point      
-        x = "1823"      
-        y = "1662"/>
+        x = "8385"      
+        y = "3213"/>
     </statePointEntry>
     <statePointEntry>
       <state      
@@ -62,26 +54,26 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "by.gsu.curiosity.mybd.test.TestActivity"/>
+        className = "by.gsu.curiosity.mybd.test.UnitActivity"/>
       <point      
-        x = "3086"      
-        y = "574"/>
+        x = "3766"      
+        y = "2209"/>
     </statePointEntry>
     <statePointEntry>
       <state      
-        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
-        className = "by.gsu.curiosity.mybd.test.TestActivity"/>
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.test.ResultActivity"/>
       <point      
-        x = "3036"      
-        y = "1480"/>
+        x = "2272"      
+        y = "2259"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "by.gsu.curiosity.mybd.test.ListActivity"/>
       <point      
-        x = "3918"      
-        y = "591"/>
+        x = "3966"      
+        y = "251"/>
     </statePointEntry>
     <statePointEntry>
       <state      
@@ -94,10 +86,58 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.info.CollectionsActivity"/>
+      <point      
+        x = "1857"      
+        y = "351"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.test.MenuTest"/>
+      <point      
+        x = "9653"      
+        y = "2623"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "by.gsu.curiosity.mybd.test.TestMenu"/>
       <point      
         x = "1148"      
         y = "608"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.MaterialDesign"/>
+      <point      
+        x = "9289"      
+        y = "853"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.lists.InfoActivity"/>
+      <point      
+        x = "6214"      
+        y = "351"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "by.gsu.curiosity.mybd.test.TestActivity"/>
+      <point      
+        x = "2912"      
+        y = "276"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "by.gsu.curiosity.mybd.test.TestActivity"/>
+      <point      
+        x = "3036"      
+        y = "1480"/>
     </statePointEntry>
     <statePointEntry>
       <state      

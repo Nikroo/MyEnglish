@@ -18,6 +18,17 @@
 
     <string name="search_title">Search</string>
     <string name="menu_item_dictionary">Dictionary</string>
+    <string name="menu_item_localeru">RU</string>
+    <string name="menu_item_localeen">EN</string>
+    <string name="menu_item_profiledark">DARK</string>
+    <string name="menu_item_profilestandart">NORM</string>
+
+    <string name="tab_item_test">TEST</string>
+    <string name="tab_item_rules">RULES</string>
+    <string name="tab_item_lists">LISTS</string>
+    <string name="tab_item_info">INFO</string>
+
+
 
     <string name="view_navigation_open">Open</string>
     <string name="view_navigation_close">Close</string>

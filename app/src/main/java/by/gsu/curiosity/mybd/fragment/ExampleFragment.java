@@ -1,5 +1,6 @@
 package by.gsu.curiosity.mybd.fragment;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,25 +10,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import by.gsu.curiosity.mybd.test.MenuTest;
 import by.gsu.curiosity.mybd.R;
+import by.gsu.curiosity.mybd.test.MenuTest;
 
 
-public class ExampleFragment extends Fragment {
+public class ExampleFragment extends AbstractTabFragment {
 
 private final static int EXAMPLE = R.layout.fragment_example;
 
 
 
-  public static ExampleFragment getInstance(){
+
+  public static ExampleFragment getInstance(Context context){
+
       Bundle args = new Bundle();
       ExampleFragment fragment = new ExampleFragment();
       fragment.setArguments(args);
+      fragment.setContext(context);
+      fragment.setTitle(context.getString(R.string.tab_item_test));
       return fragment;
   }
 
-
-    private View view;
 
     @Nullable
     @Override
@@ -46,4 +49,12 @@ private final static int EXAMPLE = R.layout.fragment_example;
 
         return view;
     }
+
+
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+
 }

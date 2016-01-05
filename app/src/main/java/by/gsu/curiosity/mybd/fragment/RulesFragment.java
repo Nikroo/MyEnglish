@@ -1,41 +1,30 @@
 package by.gsu.curiosity.mybd.fragment;
 
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+import android.content.Context;
 import android.os.Bundle;
-import android.provider.SyncStateContract;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.ImageView;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-
-import by.gsu.curiosity.mybd.test.MenuTest;
 import by.gsu.curiosity.mybd.R;
 
-public class RulesFragment extends Fragment {
+public class RulesFragment extends AbstractTabFragment {
 
     private final static int RULES = R.layout.fragment_rules;
 
 
 
-    public static RulesFragment getInstance(){
+    public static RulesFragment getInstance(Context context){
         Bundle args = new Bundle();
         RulesFragment fragment = new RulesFragment();
         fragment.setArguments(args);
+        fragment.setContext(context);
+        fragment.setTitle(context.getString(R.string.tab_item_rules));
         return fragment;
+
     }
-    private View view;
-//    private ImageView mImageView;
-
-
 
     @Nullable
     @Override
@@ -59,6 +48,12 @@ public class RulesFragment extends Fragment {
         return view;
     }
 
+
+    public void setContext(Context context) {
+        this.context = context;
     }
+
+
+}
 
 

@@ -1,6 +1,5 @@
 package by.gsu.curiosity.mybd;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -11,10 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-import by.gsu.curiosity.mybd.adapter.TabsPagerFragmentAdapter;
+import by.gsu.curiosity.mybd.adapter.TabsFragmentAdapter;
 
 public class MaterialDesign extends AppCompatActivity{
     DatabaseHelper sqlHelper;
@@ -64,7 +61,7 @@ public class MaterialDesign extends AppCompatActivity{
 
     private void initTabs() {
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this, getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
