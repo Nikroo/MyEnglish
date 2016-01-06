@@ -40,7 +40,8 @@ public class ListsFragment extends AbstractTabFragment {
         view = inflater.inflate(LISTS,container, false);
 
 
-       Button button = (Button) view.findViewById(R.id.fragment_srart_list);
+        Button button = (Button) view.findViewById(R.id.fragment_srart_list);
+        button.setText(R.string.button_start_lists);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                       Intent intent = new Intent(ListsFragment.this.getActivity(), InfoActivity.class);

@@ -14,6 +14,21 @@
     <string name="title_activity_details">DetailsActivity</string>
     <string name="title_activity_info">InfoActivity</string>
 
+    <string name="button_start_test">START TEST</string>
+    <string name="button_start_lists">START LISTS</string>
+
+    <string name="button_level_beginner">BEGINNER</string>
+    <string name="button_level_elementary">ELEMENTARY</string>
+    <string name="button_level_intermediate">INTERMEDIATE</string>
+    <string name="button_level_my_dictionary">MY DICTIONARY</string>
+
+    <string name="button_check">CHECK</string>
+    <string name="button_edit_dictionary">EDIT DICTIONARY</string>
+
+    <string name="result_text_of">of</string>
+    <string name="result_text_correct_words">correct words</string>
+    <string name="result_menu">MENU</string>
+
 
 
     <string name="search_title">Search</string>
@@ -28,7 +43,11 @@
     <string name="tab_item_lists">LISTS</string>
     <string name="tab_item_info">INFO</string>
 
-
+    
+    <string name="Restart">Restart</string>
+    <string name="LangTitle">Language</string>
+    <string name="LangDialogTitle">Choose language:</string>
+    <string name="LangSummary">Application language.\nNeed restart application to apply changes.</string>
 
     <string name="view_navigation_open">Open</string>
     <string name="view_navigation_close">Close</string>

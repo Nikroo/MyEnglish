@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.0 rc2'
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
     defaultConfig {
         applicationId "by.gsu.curiosity.mybd"
         minSdkVersion 17
@@ -24,11 +24,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.2.+'
     compile 'com.android.support:design:22.2.1'
-    compile 'com.android.support:support-v4:23.0.1'
     compile 'com.github.markushi:circlebutton:1.1'
-
-
-
     //    compile('com.mikepenz:materialdrawer:4.3.7@aar') {
     //        transitive = true
     //    }

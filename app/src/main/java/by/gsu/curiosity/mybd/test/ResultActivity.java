@@ -16,12 +16,18 @@ public class ResultActivity extends AppCompatActivity {
     TextView result;
     Button back;
 
+
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         result = (TextView) findViewById(R.id.result);
         back = (Button) findViewById(R.id.back);
-        result.setText(TestActivity.trueWord + "  of " + TestActivity.cursorCounter + " correct words");
+        back.setText(R.string.result_menu);
+
+        String of = getResources().getString(R.string.result_text_of);
+        String correct = getResources().getString(R.string.result_text_correct_words);
+
+        result.setText(TestActivity.trueWord + of + TestActivity.cursorCounter + correct);
         TestActivity.cursorCounter = 0;
         TestActivity.trueWord = 0;
 

@@ -1,5 +1,6 @@
 package by.gsu.curiosity.mybd;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -11,7 +12,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+
 import by.gsu.curiosity.mybd.adapter.TabsFragmentAdapter;
+import by.gsu.curiosity.mybd.language.ChangeLanguage;
+import by.gsu.curiosity.mybd.language.MyApplication;
 
 public class MaterialDesign extends AppCompatActivity{
     DatabaseHelper sqlHelper;
@@ -83,6 +87,10 @@ public class MaterialDesign extends AppCompatActivity{
                 switch (menuItem.getItemId()){
                     case R.id.actionDictionary:
                         showNotificationTab();
+                    case R.id.RU:
+                        Intent intent = new Intent(MaterialDesign.this, ChangeLanguage.class);
+                        startActivity(intent);
+
 
                 }
                 return true;

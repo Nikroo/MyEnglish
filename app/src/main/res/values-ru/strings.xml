@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">The English company App</string>
+
+        <string name="action_settings">Настройки</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_md">The English App</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_result">ResultActivity</string>
+    <string name="title_activity_unit">UnitActivity</string>
+
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="title_activity_details">DetailsActivity</string>
+    <string name="title_activity_info">InfoActivity</string>
+
+
+
+    <string name="search_title">Поиск</string>
+    <string name="menu_item_dictionary">Словарь</string>
+    <string name="menu_item_localeru">РУ</string>
+    <string name="menu_item_localeen">EN</string>
+    <string name="menu_item_profiledark">НОЧЬ</string>
+    <string name="menu_item_profilestandart">ДЕНЬ</string>
+
+    <string name="tab_item_test">ТЕСТ</string>
+    <string name="tab_item_rules">ПРАВИЛА</string>
+    <string name="tab_item_lists">СПИСКИ</string>
+    <string name="tab_item_info">ИНФО</string>
+
+    <string name="button_level_beginner">НАЧИНАЮЩИЙ</string>
+    <string name="button_level_elementary">ЭЛЕМЕНТАРНЫЙ</string>
+    <string name="button_level_intermediate">ПРОМЕЖУТОЧНЫЙ</string>
+    <string name="button_level_my_dictionary">МОЙ СЛОВАРЬ</string>
+
+    <string name="button_check">ПРОВЕРИТЬ</string>
+    <string name="button_edit_dictionary">РЕДАКТИРОВАТЬ СЛОВАРЬ</string>
+
+    <string name="result_text_of">из</string>
+    <string name="result_text_correct_words">слов отвечены верно</string>
+    <string name="result_menu">МЕНЮ</string>
+
+
+    <string name="button_start_test">ПРОЙТИ ТЕСТ</string>
+    <string name="button_start_lists">СПИСКИ</string>
+
+    <string name="Restart">Перезапуск</string>
+    <string name="LangTitle">Язык</string>
+    <string name="LangDialogTitle">Выберите язык:</string>
+    <string name="LangSummary">Язык приложения.\nНеобходимо перезапустить приложение для принятия изменений.</string>
+
+
+    <string name="view_navigation_open">Открыть</string>
+    <string name="view_navigation_close">Закрыть</string>
+    <string name="title_activity_test_menu">TestMenu</string>
+
+
+</resources>

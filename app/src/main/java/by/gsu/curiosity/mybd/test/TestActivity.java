@@ -41,7 +41,9 @@ public class TestActivity extends AppCompatActivity
         editWord = (EditText) findViewById(R.id.inputWord);
 
         btnCheckWord = (Button) findViewById(R.id.btnCheckWord);
+        btnCheckWord.setText(R.string.button_check);
         btnEditDictionary = (Button) findViewById(R.id.btnEditDictionary);
+        btnEditDictionary.setText(R.string.button_edit_dictionary);
         btnEditDictionary.setOnClickListener(this);
         btnCheckWord.setOnClickListener(this);
 

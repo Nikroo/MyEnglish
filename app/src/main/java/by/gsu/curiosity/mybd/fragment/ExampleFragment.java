@@ -18,9 +18,6 @@ public class ExampleFragment extends AbstractTabFragment {
 
 private final static int EXAMPLE = R.layout.fragment_example;
 
-
-
-
   public static ExampleFragment getInstance(Context context){
 
       Bundle args = new Bundle();
@@ -31,15 +28,13 @@ private final static int EXAMPLE = R.layout.fragment_example;
       return fragment;
   }
 
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(EXAMPLE,container, false);
 
-
-
         Button button = (Button) view.findViewById(R.id.button);
+        button.setText(R.string.button_start_test);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(ExampleFragment.this.getActivity(),MenuTest.class);
@@ -49,8 +44,6 @@ private final static int EXAMPLE = R.layout.fragment_example;
 
         return view;
     }
-
-
 
     public void setContext(Context context) {
         this.context = context;

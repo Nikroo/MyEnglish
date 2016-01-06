@@ -30,6 +30,9 @@ public class MenuTest extends AppCompatActivity implements View.OnClickListener 
         btnBeginner = (Button) findViewById(R.id.btnBeginner);
         btnElementary = (Button) findViewById(R.id.btnElementary);
         btnIntermediate = (Button) findViewById(R.id.btnIntermediate);
+        btnBeginner.setText(R.string.button_level_beginner);
+        btnElementary.setText(R.string.button_level_elementary);
+        btnIntermediate.setText(R.string.button_level_intermediate);
         btnBeginner.setOnClickListener(this);
         btnElementary.setOnClickListener(this);
         btnIntermediate.setOnClickListener(this);
