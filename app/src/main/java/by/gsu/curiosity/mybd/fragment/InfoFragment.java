@@ -36,14 +36,14 @@ public class InfoFragment extends AbstractTabFragment {
         view = inflater.inflate(INFO,container, false);
 
 
-
-        Button button = (Button) view.findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent(InfoFragment.this.getActivity(), CollectionsActivity.class);
-                startActivity(intent);
-            }
-        });
+//
+//        Button button = (Button) view.findViewById(R.id.button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                Intent intent = new Intent(InfoFragment.this.getActivity(), CollectionsActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
         return view;
     }

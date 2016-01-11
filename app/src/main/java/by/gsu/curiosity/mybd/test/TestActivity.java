@@ -32,6 +32,7 @@ public class TestActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test);
 
@@ -108,25 +109,6 @@ public class TestActivity extends AppCompatActivity
                 break;
             case R.id.btnCheckWord:
 //_________________________________________________________________________________________________
-
-//                      Для нахождения неправильных данных
-//                      Разбили слова посимвольно для проверки каждого символа
-//                Log.d(LOG_TAG, c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)));
-//                char [] myCharArrayTrueWord =c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)).toCharArray();
-//                char [] myCharArrayUserWord =editWord.getText().toString().toCharArray();
-//
-//                for(int i = 0, j = 0; i < myCharArrayTrueWord.length; i++, j ++) {
-//                    if(String.valueOf(myCharArrayTrueWord[i]).equals(String.valueOf(myCharArrayUserWord[j]))) {
-//                        Log.d(LOG_TAG, String.valueOf(myCharArrayTrueWord[i]));
-//                    }else{
-//                        bedLetter = new int[]{j};
-//                    }
-//                    }
-//        for(int x = 0; x < bedLetter.length; x++) {
-//            Log.d(LOG_TAG, String.valueOf(bedLetter[x]));
-//        }
-
-//_________________________________________________________________________________________________
                 if (!TextUtils.isEmpty(editWord.getText().toString())) {
 
                     if (editWord.getText().toString().equalsIgnoreCase(c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)))) {
@@ -144,12 +126,11 @@ public class TestActivity extends AppCompatActivity
                 editWord.setText("");
                 cursorCounter++;
                 if (c.moveToPosition(cursorCounter)) {
-//                    textViewEnWord.setText(c.getString(c.getColumnIndex(DatabaseHelper.EN_WORD)));
                     textViewRuWord.setText(c.getString(c.getColumnIndex(DatabaseHelper.RU_WORD)));
 
                 } else {
 
-//                    trueFolse.setText(trueWord + "  of " + cursorCounter + " correct words");
+
                     startActivity(new Intent(TestActivity.this, ResultActivity.class));
                     c.close();
 

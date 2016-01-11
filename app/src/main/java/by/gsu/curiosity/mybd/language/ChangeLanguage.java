@@ -16,6 +16,8 @@ public final class ChangeLanguage extends PreferenceActivity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+
+		setTheme(R.style.AppDefaultDark);
 		super.onCreate(savedInstanceState);
 
 		addPreferencesFromResource(R.xml.preferences);
@@ -27,6 +29,7 @@ public final class ChangeLanguage extends PreferenceActivity {
 
 		
 		restart.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+			// Перезагрузка приложения по таймеру
 			@Override
 			public boolean onPreferenceClick(Preference preference) {
 				AlarmManager mgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);

@@ -1,39 +1,45 @@
 package by.gsu.curiosity.mybd;
 
 import android.content.Intent;
-import android.database.Cursor;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-
 import by.gsu.curiosity.mybd.adapter.TabsFragmentAdapter;
 import by.gsu.curiosity.mybd.language.ChangeLanguage;
-import by.gsu.curiosity.mybd.language.MyApplication;
 
-public class MaterialDesign extends AppCompatActivity{
+
+public class MaterialDesign extends AppCompatActivity {
     DatabaseHelper sqlHelper;
-
     private static final int LAYOUT = R.layout.material_design;
-
     private Toolbar toolbar;
-    private DrawerLayout drawerLayout;
-
+    public static int theme_name;
     private ViewPager viewPager;
-    static int cursorCounter = 0;
-    static Cursor c;
+    DrawerLayout drawerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        //Получаем настройки данной activity
+//        sp = PreferenceManager.getDefaultSharedPreferences(this);
+//        int theme = sp.getInt("THEME",theme_name);
+
         setTheme(R.style.AppDefault);
+        int theme = theme_name;
+        setTheme(theme);
+
         super.onCreate(savedInstanceState);
         setContentView(LAYOUT);
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout.setBackgroundResource(Static.backgraund_main);
+
 
         initToolbar();
         initNavigationView();
@@ -48,11 +54,11 @@ public class MaterialDesign extends AppCompatActivity{
 //______________________________________________________________________________________________________
     }
 
-    private void initToolbar(){
+    private void initToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.app_name);
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorWhite));
-        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
 
             @Override
             public boolean onMenuItemClick(MenuItem item) {
@@ -84,24 +90,42 @@ public class MaterialDesign extends AppCompatActivity{
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 drawerLayout.closeDrawers();
-                switch (menuItem.getItemId()){
-                    case R.id.actionDictionary:
-                        showNotificationTab();
-                    case R.id.RU:
+                switch (menuItem.getItemId()) {
+
+                    case R.id.locale:
                         Intent intent = new Intent(MaterialDesign.this, ChangeLanguage.class);
                         startActivity(intent);
+                        break;
+                    case R.id.dark:
+                        theme_name = R.style.AppDefaultDark;
+                        Static.backgraund_main = R.drawable.backgraund_dark;
+//                        Static.backgraund_land = R.drawable.backgraund_land_dark;
+                        // Перезагрузка Activity
+                        restart();
 
+                        break;
+                    case R.id.norm:
+                        theme_name = R.style.AppDefault;
+//                        Static.backgraund_land = R.drawable.backgraund_land;
+                        Static.backgraund_main = R.drawable.backgraund_main;
+                        restart();
 
+                        break;
                 }
                 return true;
             }
         });
-//-----------------------------------------------------------------------------------------
     }
+    private void restart() {
+        Intent intent2 = getIntent();
+        finish();
+        startActivity(intent2);
+    }
+
     //-----------------------------------------------------------------------------------------
-    private void showNotificationTab (){
+    private void showNotificationTab() {
         viewPager.setCurrentItem(Constants.TAB_TWO);
     }
-// -----------------------------------------------------------------------------------------
+
 
 }

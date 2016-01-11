@@ -33,10 +33,9 @@
 
     <string name="search_title">Search</string>
     <string name="menu_item_dictionary">Dictionary</string>
-    <string name="menu_item_localeru">RU</string>
-    <string name="menu_item_localeen">EN</string>
+    <string name="menu_item_locale">LANGUAGE</string>
     <string name="menu_item_profiledark">DARK</string>
-    <string name="menu_item_profilestandart">NORM</string>
+    <string name="menu_item_profilestandart">LIGHT</string>
 
     <string name="tab_item_test">TEST</string>
     <string name="tab_item_rules">RULES</string>
@@ -52,6 +51,13 @@
     <string name="view_navigation_open">Open</string>
     <string name="view_navigation_close">Close</string>
     <string name="title_activity_test_menu">TestMenu</string>
+
+    <string name="title_fragment_info">Курсы английского языка в Гомеле</string>
+    <string name="article_fragment_info">The ENGLISH company </string>
+    <string name="phone_number1">+375 29 797 92 02</string>
+    <string name="phone_number2">+375 232 60 43 73 </string>
+
+
 
 
 </resources>

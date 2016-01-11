@@ -2,8 +2,25 @@
 <resources>
     <color name = "colorPrimary">#283593</color>
     <color name = "colorPrimaryDark">#263078</color>
+    <color name = "colorPrimaryIndigo">#3F51B5</color>
     <color name = "mainBackground">#dcdcdc</color>
     <color name = "colorWhite">#dcdcdc</color>
     <color name = "colorPrimaryBlue">#0072bc</color>
-    <color name = "colorPrimaryRed">#ed1c24</color>
+    <color name = "colorPrimaryRed">#D32F2F</color>
+    <color name = "colorRed">#F44336</color>
+    <color name = "colorBlue">#81D4FA</color>
+
+
+    <color name = "colorPrimaryDarkDark">#424242</color>
+    <color name = "grey900">#212121</color>
+    <color name = "grey800">#424242</color>
+    <color name = "mainBackgroundDark">#dcdcdc</color>
+    <color name = "colorWhiteDark">#dcdcdc</color>
+    <color name = "colorPrimaryBlueDark">#546E7A</color>
+    <color name = "colorPrimaryRedDark">#37474F</color>
+
+
+
+
+
 </resources>

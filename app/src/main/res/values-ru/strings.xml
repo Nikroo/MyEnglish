@@ -17,8 +17,7 @@
 
     <string name="search_title">Поиск</string>
     <string name="menu_item_dictionary">Словарь</string>
-    <string name="menu_item_localeru">РУ</string>
-    <string name="menu_item_localeen">EN</string>
+    <string name="menu_item_locale">ЯЗЫК</string>
     <string name="menu_item_profiledark">НОЧЬ</string>
     <string name="menu_item_profilestandart">ДЕНЬ</string>
 
@@ -52,6 +51,11 @@
     <string name="view_navigation_open">Открыть</string>
     <string name="view_navigation_close">Закрыть</string>
     <string name="title_activity_test_menu">TestMenu</string>
+
+    <string name="title_fragment_info">Курсы английского языка в Гомеле</string>
+    <string name="article_fragment_info">The ENGLISH company </string>
+    <string name="phone_number1">+375 29 797 92 02</string>
+    <string name="phone_number2">+375 232 60 43 73 </string>
 
 
 </resources>

@@ -1,9 +1,11 @@
 package by.gsu.curiosity.mybd;
+
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -11,7 +13,7 @@ import java.io.FileOutputStream;
 import java.io.File;
 import java.sql.SQLException;
 
- public class DatabaseHelper extends SQLiteOpenHelper  {
+public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static String DB_PATH = "/data/data/by.gsu.curiosity.mybd/databases/";
     private static String DB_NAME = "mainDBv3.sqlite3";
@@ -23,14 +25,13 @@ import java.sql.SQLException;
 
 
     public static final String COLUMN_ID = "_id";
-    public static  String EN_WORD = "wordEN";
-    public static  String RU_WORD = "wordRU";
+    public static String EN_WORD = "wordEN";
+    public static String RU_WORD = "wordRU";
 
-     public static  String WORDONE = "wordONE";
-     public static  String WORDTWO = "wordTWO";
-     public static  String WORDTHREE = "wordThree";
-     public static  String IRRNAME = "people";
-
+    public static String WORDONE = "wordONE";
+    public static String WORDTWO = "wordTWO";
+    public static String WORDTHREE = "wordThree";
+    public static String IRRNAME = "people";
 
 
     public DatabaseHelper db;
@@ -39,7 +40,7 @@ import java.sql.SQLException;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, SCHEMA);
-        this.myContext=context;
+        this.myContext = context;
     }
 
     @Override
@@ -48,17 +49,18 @@ import java.sql.SQLException;
 //        table = intent.getStringExtra("level");
 
     }
+
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion,  int newVersion) {
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
 
-     public Cursor getTable(String tbl_name) {
-         String sqlQuery = "select * from " + tbl_name + ";";
-         return database.rawQuery(sqlQuery, null);
-     }
+    public Cursor getTable(String tbl_name) {
+        String sqlQuery = "select * from " + tbl_name + ";";
+        return database.rawQuery(sqlQuery, null);
+    }
 
-    public void create_db(){
+    public void create_db() {
         InputStream myInput = null;
         OutputStream myOutput = null;
         try {
@@ -84,11 +86,11 @@ import java.sql.SQLException;
                 myOutput.close();
                 myInput.close();
             }
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
 
         }
     }
+
     public void open() throws SQLException {
         String path = DB_PATH + DB_NAME;
         database = SQLiteDatabase.openDatabase(path, null,
@@ -105,4 +107,4 @@ import java.sql.SQLException;
     }
 
 
- }
+}

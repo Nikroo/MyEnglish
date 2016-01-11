@@ -1,25 +1,37 @@
 <resources>
 
-
-        <!--<style name="appTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
-            <!--<item name="android:windowNoTitle">true</item>-->
-            <!--<item name="windowActionBar">false</item>-->
-        <!--</style>-->
-
-
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
     <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"/>
+    <!-- Тема AppTheme включает в себе две подтемы темную и светлую версии-->
     <style name="AppDefault" parent="AppTheme">
     <item name="colorPrimary">@color/colorPrimary</item>
     <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     <item name="colorControlNormal">@color/colorWhite</item>
     <item name="android:titleTextStyle">@color/colorWhite</item>
 
-        <!--<item name="android:windowNoTitle">true</item>-->
-    <!--<item name="android:windowActionBar">false</item>-->
-
-
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppDefaultDark" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryDarkDark</item>
+        <item name="colorPrimaryDark">@color/grey900</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="android:titleTextStyle">@color/colorWhite</item>
+
+    </style>
+
+    <style name="MenuDrawer" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryDarkDark</item>
+        <item name="colorPrimaryDark">@color/grey900</item>
+        <item name="colorControlNormal">@color/colorWhite</item>
+        <item name="android:titleTextStyle">@color/colorWhite</item>
+
+    </style>
+
+
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <!--<item name="android:windowBackground">@drawable/launch_screen</item>-->
+        <item name="android:windowBackground">@drawable/catanimation</item>
     </style>
 
 </resources>
