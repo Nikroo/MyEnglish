@@ -118,7 +118,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "by.gsu.curiosity.mybd.lists.InfoActivity"/>
+        className = "by.gsu.curiosity.mybd.lists.ExpandableListActivity"/>
       <point      
         x = "6214"      
         y = "351"/>

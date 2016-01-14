@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import by.gsu.curiosity.mybd.R;
 import by.gsu.curiosity.mybd.info.CollectionsActivity;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 
 public class InfoFragment extends AbstractTabFragment {
@@ -35,6 +37,10 @@ public class InfoFragment extends AbstractTabFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(INFO,container, false);
 
+        ImageView photoView = (ImageView) view.findViewById(R.id.info);
+
+        PhotoViewAttacher attacher = new PhotoViewAttacher(photoView);
+        attacher.setZoomable(true);
 
 //
 //        Button button = (Button) view.findViewById(R.id.button);

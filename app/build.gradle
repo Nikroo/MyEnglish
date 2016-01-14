@@ -25,6 +25,8 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.+'
     compile 'com.android.support:design:22.2.1'
     compile 'com.github.markushi:circlebutton:1.1'
+    compile 'com.commit451:PhotoView:1.2.4' // library for ImageView Zoom
+
     //    compile('com.mikepenz:materialdrawer:4.3.7@aar') {
     //        transitive = true
     //    }

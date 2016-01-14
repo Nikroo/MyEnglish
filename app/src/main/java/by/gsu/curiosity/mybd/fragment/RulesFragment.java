@@ -7,8 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+
 
 import by.gsu.curiosity.mybd.R;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class RulesFragment extends AbstractTabFragment {
 
@@ -32,10 +35,11 @@ public class RulesFragment extends AbstractTabFragment {
         view = inflater.inflate(RULES,container, false);
 
 
-//        mImageView = (ImageView) view.findViewById(R.id.imageView1);
-//        mImageView.setImageResource(R.drawable.rul1);
-//
-//        mImageView.setImageBitmap(imageUtil.getImageBitmap() );
+
+
+        ImageView PicassoImageView = (ImageView) view.findViewById(R.id.rul1);
+
+
 //
 //        FileInputStream fis = new FileInputStream(SyncStateContract.Constants. + this.image);
 //        BufferedInputStream bis = new BufferedInputStream(fis);

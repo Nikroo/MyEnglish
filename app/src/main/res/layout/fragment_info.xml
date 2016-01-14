@@ -5,18 +5,21 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     >
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/scrollView3"
-        android:layout_gravity="center_horizontal" >
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView4" >
 
         <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:scaleType="fitStart"
                 android:src="@drawable/info"
+                android:adjustViewBounds="true"
                 />
+</ScrollView>
 
-    </ScrollView>
 </LinearLayout>

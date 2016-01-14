@@ -68,7 +68,7 @@
             android:label="@string/title_activity_result" >
         </activity>
         <activity
-            android:name=".lists.InfoActivity"
+            android:name=".lists.ExpandableListActivity"
             android:label="@string/title_activity_details" >
         </activity>
 

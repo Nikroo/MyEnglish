@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import by.gsu.curiosity.mybd.R;
 
-public class InfoActivity extends AppCompatActivity implements OnGroupClickListener,OnChildClickListener {
+public class ExpandableListActivity extends AppCompatActivity implements OnGroupClickListener,OnChildClickListener {
         private ArrayList<ContactGroup> list = new ArrayList<ContactGroup>();
         private CustomAdapter adapter;
         private TextView textSelect;
@@ -33,10 +33,10 @@ public class InfoActivity extends AppCompatActivity implements OnGroupClickListe
     ContactGroup group;
 
 //Без этих конструкторов не возможно получить доступ к рессурсам
-    public InfoActivity() {
+    public ExpandableListActivity() {
             }
 
-    public InfoActivity(Context context) {
+    public ExpandableListActivity(Context context) {
         this.context = context;
     }
 
@@ -66,8 +66,8 @@ public class InfoActivity extends AppCompatActivity implements OnGroupClickListe
 
             sqlHelper.close();
 
-            int color2 =  getResources().getColor(R.color.colorPrimaryDark);
-            int color1 = getResources().getColor(R.color.colorPrimary);
+            int color2 =  getResources().getColor(R.color.colorPrimaryDark3);
+            int color1 = getResources().getColor(R.color.colorPrimaryDark2);
 
             adapter = new CustomAdapter(this, list, color1, color2);
             listView.setAdapter(adapter);

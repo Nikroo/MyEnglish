@@ -4,15 +4,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
 import by.gsu.curiosity.mybd.R;
-import by.gsu.curiosity.mybd.info.CollectionsActivity;
-import by.gsu.curiosity.mybd.lists.InfoActivity;
+import by.gsu.curiosity.mybd.lists.ExpandableListActivity;
 
 
 public class ListsFragment extends AbstractTabFragment {
@@ -44,7 +42,7 @@ public class ListsFragment extends AbstractTabFragment {
         button.setText(R.string.button_start_lists);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                      Intent intent = new Intent(ListsFragment.this.getActivity(), InfoActivity.class);
+                      Intent intent = new Intent(ListsFragment.this.getActivity(), ExpandableListActivity.class);
                         startActivity(intent);
                     }
                 });

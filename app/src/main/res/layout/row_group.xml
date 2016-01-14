@@ -6,7 +6,7 @@
     <TextView
         android:id="@+id/name"
         android:textColor="@color/colorWhite"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryRed"
         android:layout_width="fill_parent"
         android:layout_height="48dp"
         android:layout_marginLeft="50dp"
