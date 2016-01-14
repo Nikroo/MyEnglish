@@ -2,9 +2,12 @@
 <resources>
     <color name = "colorPrimary">#283593</color>
     <color name = "colorPrimaryDark">#263078</color>
+    <color name = "colorPrimaryDark2">#00233a</color>
+    <color name = "colorPrimaryDark3">#001929</color>
     <color name = "colorPrimaryIndigo">#3F51B5</color>
     <color name = "mainBackground">#dcdcdc</color>
     <color name = "colorWhite">#dcdcdc</color>
+    <color name = "colorWhite2">#ececec</color>
     <color name = "colorPrimaryBlue">#0072bc</color>
     <color name = "colorPrimaryRed">#D32F2F</color>
     <color name = "colorRed">#F44336</color>

@@ -20,50 +20,50 @@
             <ImageView
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/rul2"
-                />
-            <ImageView
-
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/rul1"
                 />
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/rul2"
+                />
 
             <ImageView
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/rul3"
                 />
             <ImageView
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/rul4"
                 />
             <ImageView
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/rul5"
                 />
             <ImageView
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/rul6"
                 />
             <ImageView
 
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/rul7"
                 />

@@ -37,6 +37,7 @@ public class ListActivity extends AppCompatActivity {
 
         header = (TextView)findViewById(R.id.header);
         mList = (ListView)findViewById(R.id.list);
+
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

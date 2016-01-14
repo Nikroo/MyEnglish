@@ -32,25 +32,6 @@ public class ContactDbHelperInfo extends SQLiteOpenHelper
     public static final String TABLE_IRREGULAR_ADJECTIVES = "ADJECTIVES";
 
 
-//    public static final String NAME = "name";
-//    public static final String PHONE = "phone";
-//    public static final String PHOTO = "photo";
-//    public static final String ABOUT = "about";
-//
-//
-//    public static final String NAME_P = "name";
-//    public static final String PHONE_P = "item1";
-//    public static final String ABOUT_P = "item2";
-//    public static final String PHOTO_P = "item3";
-//
-//
-//    public static final String TABLE_VERBS = "verbs";
-//    public static final String NAME_V = "name";
-//    public static final String PHONE_V = "item1";
-//    public static final String ABOUT_V = "item2";
-//    public static final String PHOTO_V = "item3";
-//
-//    public static final String PHOTOS_DIR = "ContactPhotos";
 
     private Context context;
     public SQLiteDatabase database2;
@@ -66,16 +47,7 @@ public class ContactDbHelperInfo extends SQLiteOpenHelper
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//        db.execSQL("CREATE TABLE " + TABLE_PEOPLE
-//                + " (_id INTEGER PRIMARY KEY AUTOINCREMENT, "
-//                + NAME + " TEXT, "
-//                + PHONE + " TEXT, "
-//                + PHOTO + " TEXT, "  // Сохраняем переменную PHOTO с типом TEXT так как храним ссылку на фото, а не графику
-//                + ABOUT + " TEXT);");
-//
-//        String dir = String.format("%s/%s",
-//                Environment.getExternalStorageDirectory().getPath(), PHOTOS_DIR);
-//        copyMedia(dir);
+
 
     }
 

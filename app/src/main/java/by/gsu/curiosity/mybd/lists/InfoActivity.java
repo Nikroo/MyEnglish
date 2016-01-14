@@ -65,7 +65,7 @@ public class InfoActivity extends AppCompatActivity implements OnGroupClickListe
             initContacts(ContactDbHelperInfo.TABLE_IRREGULAR_VERBS);
 
             sqlHelper.close();
-//Два способа получения ресурсов, первый устаревший
+
             int color2 =  getResources().getColor(R.color.colorPrimaryDark);
             int color1 = getResources().getColor(R.color.colorPrimary);
 
@@ -102,20 +102,6 @@ public class InfoActivity extends AppCompatActivity implements OnGroupClickListe
         }
 
     private void initContacts(String tableName) {
-//________________________________________________________________________________________
-// Добавление элементов не из Базы данных, а на прямую
-//        ContactGroup group = new ContactGroup("My friends");
-//        group.addContact(new ContactItem(
-//                "Jacob Anderson", "412412411", R.drawable.a1, about));
-//        group.addContact(new ContactItem(
-//                "Emily Duncan", "161863187", R.drawable.a2, about));
-//        group.addContact(new ContactItem(
-//                "Michael Fuller", "896443658", R.drawable.a3, about));
-//        group.addContact(new ContactItem(
-//                "Emma Greenman", "964990543", R.drawable.a4, about));
-//        group.addContact(new ContactItem(
-//                "Joshua Harrison", "759285086", R.drawable.a5, about));
-//        list.add(group);
 //___________________________________________________________________________________________
 
 //____________Делаем выборку из БД для ExbandableListAdapter_______________________________
@@ -125,7 +111,7 @@ public class InfoActivity extends AppCompatActivity implements OnGroupClickListe
 //        {
             for (int i = 0; i < column1.length; i++) {
                 group.addContact(new ContactItem(
-                        column1[i], column2[i], R.drawable.a15, about, column3[i]));
+                        column1[i], column2[i], R.mipmap.icon, about, column3[i]));
             }
 
 //        }

@@ -31,7 +31,7 @@
 
     <style name="AppTheme.Launcher" parent="AppTheme">
         <!--<item name="android:windowBackground">@drawable/launch_screen</item>-->
-        <item name="android:windowBackground">@drawable/catanimation</item>
+        <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
 </resources>
